@@ -1,3 +1,338 @@
-<p>
-  report works!
-</p>
+<div class="ui inverted segment">
+  <div class="ui inverted form" form [formGroup]="_reportService.form">
+  
+    <div class="two fields">
+      <div class="field">
+        <label>First Name</label>
+        <input (keypress)="onlyText($event)" placeholder="First Name" type="text"
+        formControlName="Firstname"
+        >
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input (keypress)="onlyText($event)"  placeholder="Last Name" type="text"
+        formControlName="Lastname"
+        >
+      </div>
+    </div>
+    <div>
+      <div class="two fields">
+        <div class="field">
+          <label>Rigion</label>
+          <select class="ui search dropdown" formControlName="Region">
+            <option value="">Select Rigion</option>
+            <option value="Ashanti">Ashanti</option>
+            <option value="Brong-Ahafo">Brong-Ahafo</option>
+            <option value="Central">Central</option>
+            <option value="Eastern">Eastern</option>
+            <option value="Greater Accra">Greater Accra</option>
+            <option value="Northern">Northern</option>
+            <option value="Upper East">Upper East</option>
+            <option value="Upper West">Upper West</option>
+            <option value="Volta">Volta</option>
+            <option value="Western">Western</option>
+
+          </select>
+        </div>
+
+        <div class="field">
+          <label>District</label>
+          <select class="ui search dropdown" formControlName="District">
+            <option value="">Select District</option>
+            <option value="Adansi North Distric">Adansi North District</option>
+            <option value="Adansi South District">Adansi South District</option>
+            <option value="Afigya-Kwabre District">Afigya-Kwabre District</option>
+            <option value="Ahafo-Ano North District">Ahafo-Ano North District</option>
+            <option value="Ahafo-Ano South District">Ahafo-Ano South District</option>
+            <option value="Amansie Central District">Amansie Central District</option>
+            <option value="Amansie West District">Amansie West District</option>
+            <option value="Asante-Akim Central Municipal District">Asante-Akim Central Municipal District</option>
+            <option value="Asante-Akim North District">Asante-Akim North District</option>
+            <option value="Asante-Akim South District">Asante-Akim South District</option>
+            <option value="Asokore-Mampong Municipal District">Asokore-Mampong Municipal District</option>
+            <option value="Atwima-Kwanwoma District">Atwima-Kwanwoma District</option>
+            <option value="Atwima-Mponua District">Atwima-Mponua District</option>
+            <option value="Atwima-Nwabiagya District">Atwima-Nwabiagya District</option>
+            <option value="Bekwai Municipal District">Bekwai Municipal District</option>
+            <option value="Bosome-Freho District">Bosome-Freho District</option>
+            <option value="Bosomtwe District">Bosomtwe District</option>
+            <option value="Bosomtwe Distric">Bosomtwe District</option>
+            <option value="Ejura-Sekyedumase District">Ejura-Sekyedumase District</option>
+            <option value="Kumasi Metropolitan District">Kumasi Metropolitan District</option>
+            <option value="Kumawu District">Kumawu District</option>
+            <option value="Kwabre East District">Kwabre East District</option>
+            <option value="Mampong Municipal District">Mampong Municipal District</option>
+            <option value="Obuasi Municipal District">Obuasi Municipal District</option>
+            <option value="Offinso Municipal District">Offinso Municipal District</option>
+            <option value="Offinso North District">Offinso North District</option>
+            <option value="Sekyere-Afram Plains District">Sekyere-Afram Plains District</option>
+            <option value="Sekyere Central District">Sekyere Central District</option>
+            <option value="Sekyere South District">Sekyere South District </option>
+            <option value="Asunafo North Municipal District">Asunafo North Municipal District</option>
+            <option value="Asunafo South District">Asunafo South District</option>
+            <option value="Asutifi District">Asutifi District</option>
+            <option value="Asutifi South District">Asutifi South District</option>
+            <option value="Atebubu-Amantin District">Atebubu-Amantin District</option>
+            <option value="Banda District">Banda District</option>
+            <option value="Berekum Municipal District">Berekum Municipal District</option>
+            <option value="Dormaa East Distric">Dormaa East District</option>
+            <option value="Dormaa Municipal District">Dormaa Municipal District</option>
+            <option value="Dormaa West District">Dormaa West District</option>
+            <option value="Jaman North District">Jaman North District</option>
+            <option value="Jaman South District">Jaman South District</option>
+            <option value="Kintampo North Municipal District">Kintampo North Municipal District</option>
+            <option value="Kintampo South District">Kintampo South District</option>
+            <option value="Nkoranza North District">Nkoranza North District</option>
+            <option value="Nkoranza South Municipal District">Nkoranza South Municipal District</option>
+            <option value="Pru District">Pru District</option>
+            <option value="Sene East District">Sene East District</option>
+            <option value="Sene West District">Sene West District</option>
+            <option value="Sunyani Municipal District">Sunyani Municipal District</option>
+            <option value="Sunyani West District">Sunyani West District</option>
+            <option value="Tain District">Tain District</option>
+            <option value="Tano North District">Tano North District</option>
+            <option value="Tano South District">Tano South District</option>
+            <option value="Techiman Municipal District">Techiman Municipal District</option>
+            <option value="Techiman North District">Techiman North District</option>
+            <option value="Wenchi Municipal District">Wenchi Municipal District</option>
+            <option value="Abura - Asebu - Kwamankese District">Abura - Asebu - Kwamankese District</option>
+            <option value="Agona East District">Agona East District</option>
+            <option value="Agona West Municipal District">Agona West Municipal District</option>
+            <option value="Ajumako-Enyan-Essiam District">Ajumako-Enyan-Essiam District</option>
+            <option value="Asikuma - Odoben - Brakwa District">Asikuma - Odoben - Brakwa District</option>
+            <option value="Assin North Municipal District">Assin North Municipal District</option>
+            <option value="Assin South District">Assin South District</option>
+            <option value="Awutu-Senya District">Awutu-Senya District</option>
+            <option value="Awutu Senya East Municipal District">Awutu Senya East Municipal District</option>
+            <option value="Cape Coast Metropolitan District">Cape Coast Metropolitan District</option>
+            <option value="Effutu Municipal District">Effutu Municipal District</option>
+            <option value="Ekumfi District">Ekumfi District</option>
+            <option value="Gomoa East District">Gomoa East District</option>
+            <option value="Gomoa West District">Gomoa West District</option>
+            <option value="Komenda-Edina-Eguafo-Abrem Municipal District">Komenda-Edina-Eguafo-Abrem Municipal District</option>
+            <option value="Mfantseman Municipal District">Mfantseman Municipal District</option>
+            <option value="Twifo Atti - Mokwa District">Twifo Atti - Mokwa District</option>
+            <option value="Twifo Hemang - Lower Denkyira District">Twifo Hemang - Lower Denkyira District</option>
+            <option value="Upper Denkyira East Municipal District">Upper Denkyira East Municipal District</option>
+            <option value="Upper Denkyira West District">Upper Denkyira West District</option>
+            <option value="Akwapim North Municipal District">Akwapim North Municipal District</option>
+            <option value="Akwapim South District">Akwapim South District</option>
+            <option value="Akyemansa District">Akyemansa District</option>
+            <option value="Asuogyaman District">Asuogyaman District</option>
+            <option value="Atiwa District">Atiwa District</option>
+            <option value="Ayensuano District">Ayensuano District</option>
+            <option value="Birim Central Municipal District">Birim Central Municipal District</option>
+            <option value="Birim North District">Birim North District</option>
+            <option value="Birim South District">Birim South District</option>
+            <option value="Denkyembour District">Denkyembour District</option>
+            <option value=">East Akim Municipal District">East Akim Municipal District</option>
+            <option value="Fanteakwa District">Fanteakwa District</option>
+            <option value="Kwaebibirem District">Kwaebibirem District</option>
+            <option value="Kwahu Afram Plains North District">Kwahu Afram Plains North District</option>
+            <option value="Kwahu Afram Plains South District">Kwahu Afram Plains South District</option>
+            <option value="Kwahu East District">Kwahu East District</option>
+            <option value="Kwahu South District">Kwahu South District</option>
+            <option value="Kwahu West Municipal District">Kwahu West Municipal District</option>
+            <option value="Lower Manya Krobo Municipal District">Lower Manya Krobo Municipal District</option>
+            <option value="New Juaben Municipal District">New Juaben Municipal District</option>
+            <option value="Nsawam - Adoagyire Municipal District">Nsawam - Adoagyire Municipal District</option>
+            <option value="Suhum Municipal District">Suhum Municipal District</option>
+            <option value="Upper Manya Krobo District">Upper Manya Krobo District</option>
+            <option value="Upper West Akim District">Upper West Akim District</option>
+            <option value="West Akim Municipal District">West Akim Municipal District</option>
+            <option value="Yilo Krobo Municipal District">Yilo Krobo Municipal District</option>
+            <option value="Accra Metropolitan District">Accra Metropolitan District</option>
+            <option value="Ada West District">Ada West District</option>
+            <option value="Ada East District">Ada East District</option>
+            <option value="Adenta Municipal District">Adenta Municipal District</option>
+            <option value="Ashaiman Municipal District">Ashaiman Municipal District</option>
+            <option value="Dangme East District">Dangme East District</option>
+            <option value="Ga Central Municipal District">Ga Central Municipal District</option>
+            <option value="Ga East Municipal District">Ga East Municipal District</option>
+            <option value="Ga South Municipal District or Weija Municipal District">Ga South Municipal District or Weija Municipal District</option>
+            <option value="Ga West Municipal District">Ga West Municipal District</option>
+            <option value="Kpone - Katamanso District">Kpone - Katamanso District</option>
+            <option value="La Dade-Kotopon Municipal">La Dade-Kotopon Municipal</option>
+            <option value="La-Nkwantanang-Madina District">La-Nkwantanang-Madina District</option>
+            <option value="Ledzokuku-Krowor Municipal District">Ledzokuku-Krowor Municipal District</option>
+            <option value="Ningo - Prampam District">Ningo - Prampam District</option>
+            <option value="Shai - Osudoku District">Shai - Osudoku District</option>
+            <option value="Tema Metropolitan District">Tema Metropolitan District</option>
+            <option value="Bole District">Bole District</option>
+            <option value="Bunkpurugu - Yunyoo District">Bunkpurugu - Yunyoo District</option>
+            <option value="Central Gonja District">Central Gonja District</option>
+            <option value="Chereponi District">Chereponi District</option>
+            <option value="East Gonja District">East Gonja District</option>
+            <option value="East Mamprusi District">East Mamprusi District</option>
+            <option value="Gushiegu District">Gushiegu District</option>
+            <option value="Karaga District">Karaga District</option>
+            <option value="Kpandai District">Kpandai District</option>
+            <option value="Kumbungu District">Kumbungu District</option>
+            <option value="Mamprugo-Moaduri District">Mamprugo-Moaduri District</option>
+            <option value="Mion District">Mion District</option>
+            <option value="Nanumba North District">Nanumba North District</option>
+            <option value="Nanumba South District">Nanumba South District</option>
+            <option value="North Gonja District">North Gonja District</option>
+            <option value="Saboba District">Saboba District</option>
+            <option value="Sagnerigu District">Sagnerigu District</option>
+            <option value="Savelugu-Nanton Municipal District">Savelugu-Nanton Municipal District</option>
+            <option value="Sawla-Tuna-Kalba District">Sawla-Tuna-Kalba District</option>
+            <option value="Tamale Metropolitan District">Tamale Metropolitan District</option>
+            <option value="Tatale-Sangule District">Tatale-Sangule District</option>
+            <option value="Tolong District">Tolong District</option>
+            <option value="West Gonja District">West Gonja District</option>
+            <option value="West Mamprusi District">West Mamprusi District</option>
+            <option value="Yendi Municipal District">Yendi Municipal District</option>
+            <option value="Zabzugu District">Zabzugu District</option>
+            <option value="Bawku Municipal District">Bawku Municipal District</option>
+            <option value="Bawku West District">Bawku West District</option>
+            <option value="Binduri District">Binduri District</option>
+            <option value="Bolgatanga Municipal District">Bolgatanga Municipal District</option>
+            <option value="Bongo District">Bongo District</option>
+            <option value="Builsa North District">Builsa North District</option>
+            <option value="Builsa South District">Builsa South District</option>
+            <option value="Garu District">Garu District</option>
+            <option value="Kassena Nankana Municipal District (Kassena Nankana East District)">Kassena Nankana Municipal District (Kassena Nankana East District)</option>
+            <option value="Kassena Nankana West District">Kassena Nankana West District</option>
+            <option value="Nabdam District">Nabdam District</option>
+            <option value="Pusiga District">Pusiga District</option>
+            <option value="Talensi District">Talensi District</option>
+            <option value="Bolgatanga East District">Bolgatanga East District</option>
+            <option value="Tempane District">Tempane District</option>
+            <option value="Daffiama-Bussie-Issa District">Daffiama-Bussie-Issa District</option>
+            <option value="Jirapa District">Jirapa District</option>
+            <option value="Lambussie Karni District">Lambussie Karni District</option>
+            <option value="Lawra District">Lawra District</option>
+            <option value="Nadowli-Kaleo District">Nadowli-Kaleo District</option>
+            <option value="Nandom District">Nandom District</option>
+            <option value="Sissala East District">Sissala East District</option>
+            <option value="Sissala West Distric">Sissala West District</option>
+            <option value="Wa East District">Wa East District</option>
+            <option value="Wa Municipal District">Wa Municipal District</option>
+            <option value="Wa West District">Wa West District</option>
+            <option value="Adaklu District">Adaklu District</option>
+            <option value="Afadzato South District (Afadjato District)">Afadzato South District (Afadjato District)</option>
+            <option value="Agotime-Ziope District">Agotime-Ziope District</option>
+            <option value="Akatsi North District">Akatsi North District</option>
+            <option value="Akatsi South District">Akatsi South District</option>
+            <option value="Biakoye District"> Biakoye District</option>
+            <option value="Central Tongu District">Central Tongu District</option>
+            <option value="Ho Municipal District">Ho Municipal District</option>
+            <option value="Ho West District">Ho West District</option>
+            <option value="Hohoe Municipal District">Hohoe Municipal District</option>
+            <option value="Jasikan District">Jasikan District</option>
+            <option value="Kadjebi District">Kadjebi District</option>
+            <option value="Keta Municipal District">Keta Municipal District</option>
+            <option value="Ketu South Municipal District">Ketu South Municipal District</option>
+            <option value="Ketu North District">Ketu North District</option>
+            <option value="Kpando Municipal District">Kpando Municipal District</option>
+            <option value="Krachi East District">Krachi East District</option>
+            <option value="Krachi-Nchumuru District">Krachi-Nchumuru District</option>
+            <option value="Krachi West District">Krachi West District</option>
+            <option value="Nkwanta North District">Nkwanta North District</option>
+            <option value="Nkwanta South District">Nkwanta South District</option>
+            <option value="North Dayi District">North Dayi District</option>
+            <option value="North Tongu District">North Tongu District</option>
+            <option value="South Dayi District">South Dayi District</option>
+            <option value="South Tongu District">South Tongu District</option>
+            <option value="Ahanta West District">Ahanta West District</option>
+            <option value="Aowin District">Aowin District</option>
+            <option value="Suaman District">Suaman District</option>
+            <option value="Bia District">Bia District</option>
+            <option value="Bia East District">Bia East District</option>
+            <option value="Bibiani-Anhwiaso-Bekwai District">Bibiani-Anhwiaso-Bekwai District</option>
+            <option value="Bodi District">Bodi District</option>
+            <option value="Ellembelle District">Ellembelle District</option>
+            <option value="Jomoro District">Jomoro District</option>
+            <option value="Juaboso District">Juaboso District</option>
+            <option value="Wassa East District">Wassa East District</option>
+            <option value="Mpohor District">Mpohor District</option>
+            <option value="Nzema East Municipal District">Nzema East Municipal District</option>
+            <option value="Prestea-Honi Valley District"> Prestea-Honi Valley District</option>
+            <option value="Sefwi-Akontombra District">Sefwi-Akontombra District</option>
+            <option value="Sefwi-Wiawso District">Sefwi-Wiawso District</option>
+            <option value="Sekondi-Takoradi Metropolitan District">Sekondi-Takoradi Metropolitan District</option>
+            <option value="Shama District">Shama District</option>
+            <option value="Tarkwa Nsuaem Municipal District">Tarkwa Nsuaem Municipal District</option>
+            <option value="Wasa-Amenfi East District">Wasa-Amenfi East District</option>
+            <option value="Wasa-Amenfi Central District">Wasa-Amenfi Central District</option>
+            <option value="Wasa-Amenfi West District">Wasa-Amenfi West District</option>
+
+          </select>
+
+        </div>
+       
+      </div>
+      <div class="two fields">
+        <div class="field">
+          <label>Pricise Location</label>
+          <input placeholder=" Type Pricise Location here" type="text" formControlName="Location">
+        </div>
+        <div class="field">
+          <label>Damage State</label>
+          <select class="ui search dropdown" formControlName="State">
+            <option value="">Select Damage State</option>
+             <option value="Extremely  Bad">Extremely  Bad</option>
+             <option value="Really Bad">Really Bad</option>
+             <option value="Bad">Bad</option>
+            
+
+          </select>
+        </div>
+      </div>
+      <div class="two fields">
+        <div class="field">
+          <label>Date</label>
+          <input placeholder=" Date" type="text" readonly [(ngModel)]="CurrenDate" formControlName="Date">
+        </div>
+        <div class="field">
+          <label>Time</label>
+          <input placeholder=" Time" type="text" readonly [(ngModel)]="CurrentTime" formControlName="Time">
+        </div>
+        
+      </div>
+      <div class="two fields">
+        <div class="field">
+          <label>Phone Number</label>
+        <!--   <input (keyup)="_keyUp($event)"  placeholder="024 828 4049" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="10"  title="Ten digits code" required/>  -->
+          <input (keypress)="onlyNumber($event)"  placeholder="024 828 4049" 
+          pattern="[0-9]{3} [0-9]{3} [0-9]{4}" maxlength="10" 
+           title="Ten digits code" required  formControlName="Phone" />
+        </div>
+        <div class="field">
+          <label>Message Subject</label>
+        
+          <input (keypress)="onlyText($event)"  placeholder=" Message Subject" type="text"
+          formControlName="Subject"
+          >
+        </div>
+      </div>
+      <div class="two fields">
+        <div class="field">
+          <label>Message</label>
+          <textarea placeholder=" In less than 200 words, 
+          Kindly report your concern with clarity"
+            maxlength="200" formControlName="Message"></textarea>
+        </div>
+        <div class="field">
+          <label>Scene Photo/Image</label>
+          
+          <angular-file-uploader
+          [config]="afuConfig">
+    </angular-file-uploader>
+       
+        </div>
+      </div>
+      <div class="field">
+        
+        <input placeholder="Status" type="text" hidden value="{{status}}" formControlName="Status">
+      </div>
+      <div align="center">
+       <button type="submit" mat-raised-button color="primary"  (click)="SubmitReport()">Submit Report</button>
+      </div>
+      
+    </div>
+    </div>
+</div>
+  
+    

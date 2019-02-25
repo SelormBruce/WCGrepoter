@@ -1,0 +1,15 @@
+table {
+ width: 100%;
+}
+
+.mat-form-field {
+ font-size: 14px;
+ width: 100%;
+}
+
+td{
+ height:100px;
+}
+mat-accordion,mat-expansion-panel{
+width: 250px;
+}

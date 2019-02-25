@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  config: {
+    apiKey: 'AIzaSyA2HcUYpbafiN0sPpay0KESAQRTau8JFtQ',
+    authDomain: 'wgcrepoter.firebaseapp.com',
+    databaseURL: 'https://wgcrepoter.firebaseio.com',
+    projectId: 'wgcrepoter',
+    storageBucket: '',
+    messagingSenderId: '944518691906'
+  }
 };
 
 /*

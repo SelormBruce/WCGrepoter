@@ -1,0 +1,30 @@
+
+
+
+<form #login="ngForm" (ngSubmit) ="AdminLogin(login)">
+
+  <div>
+    <div class="ui inverted segment">
+      <div class="ui inverted form">
+        
+          <div class="field">
+            <label>Administrative  Name</label>
+            <input placeholder="Administrative Name" type="text"
+             ngModel name="email" email required #emailInput="ngModel"
+            >
+          </div>
+          <div class="field">
+            <label>Administrative Password</label>
+            <input placeholder="Administrative Password" type="password"
+            ngModel name="password" password required #passwordInput="ngModel"
+            >
+          </div>
+       
+       <div  align="center">
+        <button type="submit" mat-raised-button >Submit</button>
+       </div>
+       
+      </div>
+    </div>
+  </div>
+</form>

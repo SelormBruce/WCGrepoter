@@ -4,7 +4,9 @@
   <div fxShow.xs="true" fxHide.gt-xs="true" style="background-color:black"> 
       <h1>Ghana Water Company Reporter</h1>
   </div>
-
+  <div class="ui bottom attached button" tabindex="0" (click)="goToAdmin()">
+    Administrative  Login
+  </div>
   <form>
      
         <div> <br> <br></div>
@@ -16,13 +18,11 @@
               </div>
               <div> <br> <br></div>
               <div> <br> <br></div>
-              
-              <div class="ui animated button" tabindex="0">
-                  <div class="visible content">Report a Problem</div>
-                  <div class="hidden content">
-                    <i class="right arrow icon"></i>
-                  </div>
+              <div> <br> <br></div>
+              <div class="ui bottom attached button" tabindex="0" (click)="goToReport()">
+                Report A Problem
               </div>
+            
       
     </form>
     
