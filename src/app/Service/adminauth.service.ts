@@ -40,7 +40,7 @@ export class AdminauthService {
 
   }
   isAuth() {
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/report-list']);
     return this.user != null;
   }
 

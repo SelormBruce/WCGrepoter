@@ -36,7 +36,7 @@ export class AdminComponent implements OnInit {
       email : form.value.email,
       password: form.value.password
     });
-    this.router.navigate(["/report-list"]);
+  
   }
   
 

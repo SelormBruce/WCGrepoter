@@ -1,0 +1,75 @@
+[debug] [2019-05-24T11:49:18.920Z] ----------------------------------------------------------------------
+[debug] [2019-05-24T11:49:18.924Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Selorm Bruce\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-05-24T11:49:18.925Z] CLI Version:   6.9.2
+[debug] [2019-05-24T11:49:18.925Z] Platform:      win32
+[debug] [2019-05-24T11:49:18.925Z] Node Version:  v10.15.3
+[debug] [2019-05-24T11:49:18.928Z] Time:          Fri May 24 2019 12:49:18 GMT+0100 (British Summer Time)
+[debug] [2019-05-24T11:49:18.928Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-24T11:49:18.953Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-24T11:49:18.956Z] > authorizing via signed-in user
+[debug] [2019-05-24T11:49:18.956Z] [iam] checking project wgcrepoter for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-05-24T11:49:18.961Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wgcrepoter:testIamPermissions  
+
+[debug] [2019-05-24T11:49:20.482Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-24T11:49:20.485Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/wgcrepoter  
+ 
+[debug] [2019-05-24T11:49:21.686Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'wgcrepoter'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-05-24T11:49:21.709Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/wgcrepoter/versions  
+
+[debug] [2019-05-24T11:49:23.985Z] <<< HTTP RESPONSE 200
+[info] i  hosting[wgcrepoter]: beginning deploy...
+[info] i  hosting[wgcrepoter]: found 193 files in dist/WCGrepoter
+[debug] [2019-05-24T11:49:24.088Z] [hosting] hash cache [ZGlzdFxXQ0dyZXBvdGVy] load error: lines is not defined
+[debug] [2019-05-24T11:49:25.358Z] [hosting] hash cache [ZGlzdFxXQ0dyZXBvdGVy] stored for 193 files
+[debug] [2019-05-24T11:49:25.359Z] [hosting][hash queue][FINAL]
+[debug] [2019-05-24T11:49:25.360Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/wgcrepoter/versions/8e02f2d07a7e9b56:populateFiles  
+ <request body omitted>
+[debug] [2019-05-24T11:49:29.317Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-24T11:49:29.321Z] [hosting][populate queue][FINAL]
+[debug] [2019-05-24T11:49:29.321Z] [hosting] uploads queued: 2
+[debug] [2019-05-24T11:49:36.258Z] [hosting][upload queue][FINAL]
+[info] +  hosting[wgcrepoter]: file upload complete
+[debug] [2019-05-24T11:49:36.260Z] [hosting] deploy completed after 12272ms
+[debug] [2019-05-24T11:49:37.183Z] [
+  {
+    "config": {
+      "public": "dist/WCGrepoter",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "wgcrepoter"
+    },
+    "site": "wgcrepoter",
+    "version": "sites/wgcrepoter/versions/8e02f2d07a7e9b56"
+  }
+]
+[info] i  hosting[wgcrepoter]: finalizing version...
+[debug] [2019-05-24T11:49:37.186Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/wgcrepoter/versions/8e02f2d07a7e9b56?updateMask=status  
+
+[debug] [2019-05-24T11:49:38.481Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-24T11:49:38.481Z] [hosting] finalized version for wgcrepoter:
+[info] +  hosting[wgcrepoter]: version finalized
+[info] i  hosting[wgcrepoter]: releasing new version...
+[debug] [2019-05-24T11:49:38.487Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/wgcrepoter/releases?version_name=sites/wgcrepoter/versions/8e02f2d07a7e9b56  
+
+[debug] [2019-05-24T11:49:40.113Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-24T11:49:40.114Z] [hosting] release:
+[info] +  hosting[wgcrepoter]: release complete
+[info] 
+[info] +  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/wgcrepoter/overview
+[info] Hosting URL: https://wgcrepoter.firebaseapp.com
