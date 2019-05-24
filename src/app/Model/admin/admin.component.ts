@@ -28,22 +28,19 @@ export class AdminComponent implements OnInit {
     
   }
 
-  AdminLogin(form: NgForm) {
- if(!this.state){
-  this.adminauth.login(form.value.email, form.value.password);
-  this.tostrs.success('','You are Logged in');
-  this.router.navigate(['/report-list']);
- }
- else{
-  this.tostrs.error('','Invalid Administrative Credentials');
-  this.router.navigate(['/Admin']);
-  form.reset();
- }
+
       
-  
-  
+  AdminLogin(form:NgForm){
 
-
+    this.adminauth.login( {
+      email : form.value.email,
+      password: form.value.password
+    });
+    this.router.navigate(["/report-list"]);
   }
+  
+
+
+  
 
 }
